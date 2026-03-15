@@ -67,3 +67,7 @@ Risk metrics were calculated using **Monte Carlo simulations** and **Bootstrap m
 1. Clone the repository:
 ```bash
 git clone <(https://github.com/Chalani127/Stock-Forecasting-LSTM-vs-ARIMA.git)>
+```
+
+2. Install dependencies: pip install yfinance pandas numpy matplotlib seaborn tensorflow pmdarima.
+3. Run the Jupyter Notebook to see the step-by-step analysis and model comparisons.
