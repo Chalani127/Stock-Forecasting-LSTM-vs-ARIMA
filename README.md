@@ -1,65 +1,69 @@
-Multi-Stock Analysis & Price Prediction: LSTM vs. ARIMA
-📌 Project Overview
-This project presents an end-to-end data science workflow applied to financial stock markets. It begins with a comprehensive Exploratory Data Analysis (EDA) of a diversified portfolio and moves into advanced Time Series Forecasting to predict future stock prices.
+# Multi-Stock Analysis & Price Prediction: LSTM vs. ARIMA
 
-The core of the project is a comparative study between two distinct methodologies:
+## 📌 Project Overview
+This project demonstrates an end-to-end data science workflow applied to financial stock markets. It includes comprehensive **Exploratory Data Analysis (EDA)** of a diversified portfolio and advanced **Time Series Forecasting** to predict future stock prices.
 
-LSTM (Long Short-Term Memory): A deep learning recurrent neural network designed to capture non-linear dependencies.
+The core focus is a comparative study between two methodologies:
 
-ARIMA (AutoRegressive Integrated Moving Average): A classical statistical model focused on trend stationarity and autocorrelations.
+- **LSTM (Long Short-Term Memory):** A deep learning recurrent neural network designed to capture non-linear dependencies.  
+- **ARIMA (AutoRegressive Integrated Moving Average):** A classical statistical model focused on trend stationarity and autocorrelations.
 
-📊 Key Research Questions
-The analysis seeks to answer seven critical financial questions:
+---
 
-What was the change in stock price over time?
+## 📊 Key Research Questions
+This analysis aims to answer the following:
 
-What were the moving averages for various stocks?
+1. How did stock prices change over time?  
+2. What were the moving averages for various stocks?  
+3. What was the average daily return?  
+4. How correlated are different stocks?  
+5. How much value is at risk (VaR) for a particular investment?  
+6. Can we predict future stock behavior (Apple Inc.)?  
+7. Which model (LSTM vs. ARIMA) performs better?
 
-What was the average daily return?
+---
 
-What is the correlation between different stocks?
+## 🛠️ Tech Stack
+- **Data Source:** [yfinance](https://pypi.org/project/yfinance/) (Yahoo Finance API)  
+- **Analysis:** Pandas, NumPy  
+- **Visualization:** Matplotlib, Seaborn  
+- **Machine Learning:** TensorFlow/Keras (LSTM)  
+- **Statistical Modeling:** statsmodels, pmdarima (Auto-ARIMA)  
 
-How much value is at risk (VaR) for a particular investment?
+---
 
-Can we predict future stock behavior (Apple Inc.)?
+## 📈 Methodology & Results
 
-Which model (LSTM vs. ARIMA) performs better?
+### 1. Data Collection
+Historical stock data was pulled for:
+- Apple (AAPL)  
+- Tesla (TSLA)  
+- Coca-Cola (KO)  
+- Booking Holdings (BKNG)
 
-🛠️ Tech Stack
-Data Source: yfinance (Yahoo Finance API)
+### 2. Risk Analysis
+Risk metrics were calculated using **Monte Carlo simulations** and **Bootstrap methods** to determine the **Value at Risk (VaR)**.
 
-Analysis: Pandas, NumPy
+### 3. Forecasting Apple (AAPL) Closing Prices
+- **LSTM Model:** Configured with 50-unit layers and trained over 1 epoch (demo purposes).  
+  - **RMSE:** 8.29  
 
-Visualization: Matplotlib, Seaborn
+- **ARIMA Model:** Utilized `auto_arima` after confirming non-stationarity with the Augmented Dickey-Fuller (ADF) test.  
+  - **RMSE:** 4.09  
 
-Machine Learning: TensorFlow/Keras (LSTM)
+**Conclusion:** ARIMA outperformed LSTM in this scenario, highlighting that traditional statistical models can be more robust than deep learning for highly volatile financial time series.
 
-Statistical Modeling: statsmodels, pmdarima (Auto-ARIMA)
+---
 
-📈 Methodology & Results
-1. Data Collection
-Historical data was pulled for Apple (AAPL), Tesla (TSLA), Coca-Cola (KO), and Booking Holdings (BKNG).
+## 🏆 Final Metrics
+| Model | RMSE |
+|-------|------|
+| ARIMA | 4.09 |
+| LSTM  | 8.29 |
 
-2. Risk Analysis
-The project calculates risk using Monte Carlo simulations and the Bootstrap method to determine the Value at Risk (VaR).
+---
 
-3. Forecasting Apple (AAPL) Closing Prices
-LSTM Model: Configured with 50-unit layers and trained over 1 epoch (for demonstration). It achieved an RMSE of 8.29.
-
-ARIMA Model: Utilizing auto_arima after verifying non-stationarity via the Augmented Dickey-Fuller (ADF) test. It achieved a significantly lower RMSE of 4.09.
-
-🏆 Final Conclusion
-Contrary to the common assumption that Deep Learning is always superior, the ARIMA model outperformed the LSTM model in this specific scenario.
-
-ARIMA RMSE: 4.09
-
-LSTM RMSE: 8.29
-
-This highlights the importance of choosing the right tool for the data; in highly volatile financial time series, traditional statistical models that account for mean reversion and trends can sometimes be more robust than complex neural networks.
-
-🚀 How to Use
-Clone the repository.
-
-Install dependencies: pip install yfinance pandas numpy matplotlib seaborn tensorflow pmdarima.
-
-Run the Jupyter Notebook to see the step-by-step analysis and model comparisons.
+## 🚀 How to Use
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
