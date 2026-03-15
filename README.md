@@ -66,4 +66,4 @@ Risk metrics were calculated using **Monte Carlo simulations** and **Bootstrap m
 ## 🚀 How to Use
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone <[your-repo-url](https://github.com/Chalani127/Stock-Forecasting-LSTM-vs-ARIMA.git)>
