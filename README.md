@@ -42,7 +42,7 @@ Historical stock data was pulled for:
 - Booking Holdings (BKNG)
 
 ### 2. Risk Analysis
-Risk metrics were calculated using **Monte Carlo simulations** and **Bootstrap methods** to determine the **Value at Risk (VaR)**.
+Explored stock correlations and calculated basic risk metrics, including daily returns and volatility, to assess potential investment behavior.
 
 ### 3. Forecasting Apple (AAPL) Closing Prices
 - **LSTM Model:** Configured with 50-unit layers and trained over 1 epoch (demo purposes).  
